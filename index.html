@@ -22,6 +22,9 @@
   max-width: 62em;
 
 }
+body	{
+background-image: url(images/fm18.jpg);  background-size: 400px 300px;height: 100vh;
+}
 	.logo {
 	text-decoration:underline;
   	text-decoration-style: dotted;
@@ -31,6 +34,7 @@
 	text-decoration:underline;
   	text-decoration-style: dotted;
 	text-transform:uppercase;
+color:#3eaee0;
 
 	}
         .btn-book {
@@ -58,19 +62,17 @@ padding:5px;
 
 </head>
 
-<body class="d-flex background bg-white" style="background-image: url(images/fm18.jpg);  background-size: 400px 300px;height: 100vh;">
+<body>
      
-<div class="background bg-white cover-container d-flex w-100 flex-column mx-auto my-xl-5 my-lg-4 my-md-3 my-sm-2 my-xs-1">
+<div class="bg-white cover-container d-flex w-100 flex-column mx-auto my-xl-5 my-lg-4 my-md-3 my-sm-2 my-xs-1">
   
-<main class="background bg-white border border-5">
+<main class="bg-white border border-5">
 
-<div class="rounded style="margin:2em 0 1em 0;">
+<div>
+<a href="/" style="text-decoration:none"><h1 class="logo text-uppercase text-center display-3"  text-shadow: 1px 1px 2px #eee">The Bollard Museum</h1></a>
 
-<a href="/" style="text-decoration:none"><h2 class="logo text-uppercase text-center display-3"  text-shadow: 1px 1px 2px #eee">The Bollard Museum</h2></a>
-
-<p class="text-center text-nowrap" style="color: #f7661e;padding:1em 0 0 0;">
+<p class="text-center text-nowrap" style="color: #f7661e;padding:0.5em 0 0 0;">
   | <a class="navlink" href="#">Visit</a>  | 
-
   <a class="navlink" href="#">Gifts</a> | 
   <a class="navlink" href="#">About</a> |   
   <a class="navlink" href="#">FAQ</a> |   
@@ -78,19 +80,19 @@ padding:5px;
 </p>
 </div>
 
-<div class="fs-3" style="background-image: url(images/fm27-1.jpg);color:#fff;margin:1em 0 0 0;min-height:260px">
+<div class="fs-3" style="background-image: url(images/fm27-1.jpg);color:#fff;margin:0 0 0 0;min-height:260px">
 
    	<div class="text-start" style="margin:1.5em 0 0 0;padding:1em 0 0 0;">
-	<span class="heroquote">"A twist of sheer brilliance and a dash of the absurd"&nbsp;</span>
+	<span class="heroquote">"A twist of sheer brilliance and a dash of the absurd"</span>
 	</div>
 
    	<div class="text-end" style="margin:1.5em 0 0 0;">
-	<span class="heroquote">&nbsp;"Expect the unexpected"</span>
+	<span class="heroquote">"Expect the unexpected"</span>
 	</div>
 
 
 	<div class="text-start" style="margin:1.5em 0 0 0;">
-	<span class="heroquote">"Unsung pillars of society"&nbsp;</span>
+	<span class="heroquote">"Unsung pillars of society"</span>
 	</div>
 
 </div>
@@ -137,17 +139,17 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
 	</div>
 </div>
 <br>
-<div class="statement clear rounded text-center">Grand Opening Offer: Bag some souvenirs for an invite to our launch event (1 ticket per item)</div>
+<div class="statement clear rounded text-center">Grab a souvenir for an invite to our launch event (1 ticket per item)</div>
 
 
-<div class="background bg-white text-center" style="padding:0 1em;">
+<div class="background bg-white text-center" style="margin:1em 0 0 0;padding:0 1em;">
 
 
 <div class="card-group">
 <div class="card">
   <img src="images/pack-of-4-coasters.png" class="card-img-top" alt="Bollard Museum 4 pack of coasters">
   <div class="card-body">
-    <p class="card-text">£12 | <a href="#">Coasters</a></p>
+    <p class="card-text">£12 | <a class="navlink" href="#">Coasters</a></p>
   </div>
 </div>
 
@@ -155,20 +157,20 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
 <div class="card">
   <img src="images/water-bottle.png" class="card-img-top" alt="Bollard Museum Water Bottle">
   <div class="card-body">
-    <p class="card-text">£9 &nbsp;  | <a href="#">Water bottle</a></p>
+    <p class="card-text">£9 &nbsp;  | <a class="navlink" href="#">Water bottle</a></p>
   </div>
 </div>
 
 <div class="card">
   <img src="images/teatowel.png" class="card-img-top" alt="Bollard Museum Tea Towel">
   <div class="card-body">
-    <p class="card-text">£6 &nbsp;  | <a href="#">Tea towel</a></p>
+    <p class="card-text">£6 &nbsp;  | <a class="navlink" href="#">Tea towel</a></p>
   </div>
 </div>
 <div class="card">
   <img src="images/a4-print.png" class="card-img-top" alt="Bollard Museum A4 Print">
   <div class="card-body">
-    <p class="card-text">£10 | <a href="#">A4 print</a></p>
+    <p class="card-text">£10 | <a class="navlink" href="#">A4 print</a></p>
   </div>
 </div>
 </div>
@@ -179,11 +181,16 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
 </div>
 
 
-<div class="rounded text-center" style="color:#000;padding:0.5em 0.5em;">
-<span class="logo text-uppercase fs-5">The Bollard Museum</span>
-<br>
-<a href="mailto:info@bollardmuseum.org.uk">info@bollardmuseum.org.uk</a>
-<br>
+<div class="bg-light bg-gradient text-center" style="padding:1em 0.5em;">
+<span class="logo text-uppercase fs-4">The Bollard Museum</span>
+<p><br>
+<a class="navlink" href="mailto:info@bollardmuseum.org.uk">info@bollardmuseum.org.uk</a></p>
+<p class="text-nowrap" style="color: #f7661e;padding:0.5em 0 0 0;">
+  | <a class="navlink" href="#">Privacy</a>  | 
+  <a class="navlink" href="#">Funding</a> |   
+  <a class="navlink" href="#">FAQ</a> |   
+  <a class="navlink" href="#">Contact</a> |  
+</p>
 
 2024 All rights reserved
 </div>
