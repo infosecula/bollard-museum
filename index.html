@@ -13,11 +13,9 @@ Countly.q = Countly.q || [];
 
 //provide countly initialization parameters
 Countly.app_key = '441b4546b48d2fb62ac8eaa366fff7d93f7174bb';
-Countly.url = 'https://bollardmuseum.org.uk';
-Countly.country_code = "GB";
-Countly.city = "Europe/London";
-Countly.require_consent = true;
+Countly.url = 'https://bollard-a1cead5c00221.flex.countly.com';
 Countly.ignore_bots = false;
+Countly.ignore_prefetch = false;
 
 Countly.q.push(['track_sessions']);
 Countly.q.push(['track_pageview']);
@@ -33,7 +31,7 @@ Countly.q.push(['collect_from_forms']);
    var cly = document.createElement('script'); cly.type = 'text/javascript';
    cly.async = true;
    //enter url of script here
-   cly.src = 'https://bollard-a1cead5c00221.flex.countly.com/sdk/web/countly.min.js';
+   cly.src = 'https://cdnjs.cloudflare.com/ajax/libs/countly-sdk-web/20.4.0/countly.min.js';
    cly.onload = function(){Countly.init()};
    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
 })();
@@ -99,7 +97,7 @@ Countly.q.push(['collect_from_forms']);
 </head>
 
 <body>
-    <noscript><img src='https://bollard-a1cead5c00221.flex.countly.com/pixel.png?app_key=441b4546b48d2fb62ac8eaa366fff7d93f7174bb&begin_session=1'/></noscript> 
+<noscript><img src='https://bollard-a1cead5c00221.flex.countly.com/pixel.png?app_key=441b4546b48d2fb62ac8eaa366fff7d93f7174bb&begin_session=1'/></noscript>
 <div class="bg-white cover-container d-flex w-100 flex-column mx-auto my-xl-5 my-lg-4 my-md-3 my-sm-2 my-xs-1">
   
 <main class="bg-white border border-5">
