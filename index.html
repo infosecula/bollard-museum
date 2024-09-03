@@ -96,7 +96,23 @@ font-size:16px;
 </style>
 
 </head>
-
+<script>
+window.addEventListener("load", function() {
+  const form = document.getElementById('my-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Success!");
+    })
+  });
+})
+</script>
 <body>
 <div class="invisible">
 <noscript><img src='https://bollard-a1cead5c00221.flex.countly.com/pixel.png?app_key=441b4546b48d2fb62ac8eaa366fff7d93f7174bb&begin_session=1'/></noscript>
@@ -151,7 +167,7 @@ font-size:16px;
                 </div>
             </div>
             
-          <form method="POST" action="https://script.google.com/macros/s/AKfycbw7vpa_aKaw5KQ7Yuw0sFInUQABgv5GbcPm6skWA37SSU6LbOefW_us2zhOp0Rm228E/exec">  
+          <form id="my-form" method="POST" action="https://script.google.com/macros/s/AKfycbw7vpa_aKaw5KQ7Yuw0sFInUQABgv5GbcPm6skWA37SSU6LbOefW_us2zhOp0Rm228E/exec">  
             <div class="px-1 d-flex flex-row gap-2 align-items-center mt-2">
 <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -197,7 +213,7 @@ font-size:16px;
 </div>
 
 <div class="form-check m-2">
-  <input name="partners" class="form-check-input" type="checkbox" value="partner" id="flexCheckChecked">
+  <input name="partner" class="form-check-input" type="checkbox" value="partner" id="flexCheckChecked">
   <label class="form-check-label" for="flexCheckChecked">
     Institutional Partnerships &amp; Funding Opportunities
   </label>
