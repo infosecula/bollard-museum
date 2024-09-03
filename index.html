@@ -109,6 +109,14 @@ font-size:16px;
 </head>
 <script>
 window.addEventListener("load", function() {
+const myModal = new bootstrap.Modal('#exampleModal');
+document.getElementById('success').style.display = 'none';
+
+
+
+
+
+
   const form = document.getElementById('my-form');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -119,12 +127,21 @@ window.addEventListener("load", function() {
       body: data,
     })
     .then(() => {
-alert("Thank you for registering!");
-location.reload();
- document.getElementById('signup').style.display = 'none';
+
+myModal.hide();
+document.getElementById('alert').style.display = 'none';
+document.getElementById('signup').style.display = 'none';
+document.getElementById('success').style.display = 'block';
+
+
+
+
+
     })
+
   });
 })
+
 </script>
 
 <body>
@@ -165,8 +182,11 @@ location.reload();
 <img src="images/bollards1.jpeg" width="200" height="200" class="d-none d-md-block border border-2 float-start">
 <div style="line-height:1.2em;">Join us on this whimsical journey, where we'll explore the evolution of bollards, from humble beginnings to iconic status.
 
+<div id="success" class="bg-success bg-gradient  mx-auto m-4 p-3 py-2 text-white">Thank you for registering</div>
     <div id="signup" class="card bg-warning bg-gradient mx-auto m-2 p-3 py-2">
-        
+
+
+
             <div class="d-flex flex-row">
                 <div class="d-flex flex-column mx-auto">
                     <h6><small>We're just getting started, please sign-up for our latest news</small></h6>
@@ -209,15 +229,15 @@ Name:   <input name="name" class="form-input" placeholder="Your name" id="name">
 </div>
 
 <div class="form-check m-2">
-  <input name="media" class="form-check-input" type="checkbox" value="media" id="flexCheckChecked">
-  <label class="form-check-label" for="flexCheckChecked">
+  <input name="media" class="form-check-input" type="checkbox" value="media" id="flexCheckChecked1">
+  <label class="form-check-label" for="flexCheckChecked1">
     Media (for press releases, media clips and stats)
   </label>
 </div>
 
 <div class="form-check m-2">
-  <input name="partner" class="form-check-input" type="checkbox" value="partner" id="flexCheckChecked">
-  <label class="form-check-label" for="flexCheckChecked">
+  <input name="partner" class="form-check-input" type="checkbox" value="partner" id="flexCheckChecked2">
+  <label class="form-check-label" for="flexCheckChecked2">
     Institutional Partnerships &amp; Funding Opportunities
   </label>
 </div>
