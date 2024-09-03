@@ -121,6 +121,7 @@ window.addEventListener("load", function() {
     .then(() => {
 alert("Thank you for registering!");
 location.reload();
+ document.getElementById('signup').style.display = 'none';
     })
   });
 })
@@ -164,11 +165,11 @@ location.reload();
 <img src="images/bollards1.jpeg" width="200" height="200" class="d-none d-md-block border border-2 float-start">
 <div style="line-height:1.2em;">Join us on this whimsical journey, where we'll explore the evolution of bollards, from humble beginnings to iconic status.
 
-    <div class="card mx-auto m-1 p-3 py-3">
+    <div id="signup" class="card bg-warning bg-gradient mx-auto m-2 p-3 py-2">
         
             <div class="d-flex flex-row">
                 <div class="d-flex flex-column mx-auto">
-                    <h6><small>We're just getting started, so please sign-up for our latest news</small></h6>
+                    <h6><small>We're just getting started, please sign-up for our latest news</small></h6>
 
                 </div>
             </div>
@@ -176,7 +177,7 @@ location.reload();
           <form id="my-form" method="POST" action="https://script.google.com/macros/s/AKfycbw7vpa_aKaw5KQ7Yuw0sFInUQABgv5GbcPm6skWA37SSU6LbOefW_us2zhOp0Rm228E/exec">  
 
    <div class="px-1 d-flex flex-row gap-2 align-items-center mt-2">
-<input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+<input name="email" placeholder="your email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Notify
 </button>
