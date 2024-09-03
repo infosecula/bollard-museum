@@ -151,9 +151,9 @@ font-size:16px;
                 </div>
             </div>
             
-            
+          <form method="POST" action="https://script.google.com/macros/s/AKfycbw7vpa_aKaw5KQ7Yuw0sFInUQABgv5GbcPm6skWA37SSU6LbOefW_us2zhOp0Rm228E/exec">  
             <div class="px-1 d-flex flex-row gap-2 align-items-center mt-2">
-                <input class="form-control" placeholder="e.g. name@gmail.com">
+<input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Notify
 </button>
@@ -176,13 +176,13 @@ font-size:16px;
       </div>
       <div class="modal-body">
 <div class="form-check m-2">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+  <input name="news" class="form-check-input" type="checkbox" value="news" id="flexCheckDefault" checked>
   <label class="form-check-label" for="flexCheckChecked">
     Bollard Museum News (our default newsletter)
   </label>
 </div>
 <div class="form-check m-2">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+  <input name="media" class="form-check-input" type="checkbox" value="media" id="flexCheckChecked">
   <label class="form-check-label" for="flexCheckChecked">
     Media Enquiries (for press releases, media clips and stats)
   </label>
@@ -190,14 +190,14 @@ font-size:16px;
 
 
 <div class="form-check m-2">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+  <input name="join" class="form-check-input" type="checkbox" value="join" id="flexCheckChecked">
   <label class="form-check-label" for="flexCheckChecked">
     Join Our Team
   </label>
 </div>
 
 <div class="form-check m-2">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+  <input name="partners" class="form-check-input" type="checkbox" value="partner" id="flexCheckChecked">
   <label class="form-check-label" for="flexCheckChecked">
     Institutional Partnerships &amp; Funding Opportunities
   </label>
@@ -205,12 +205,12 @@ font-size:16px;
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
 </div>
-
+</form>
 <div class="statement clearfix rounded text-center">Guided tours will be free for a limited time</div>
 
 <div class="d-none d-md-block lead rounded fs-4 word-break" style="margin:1em 0.5em;min-height:200px">
