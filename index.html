@@ -94,6 +94,15 @@ font-size:16px;
 	border-color:#fff;
 
 	}
+        #alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+	z-index:1100;
+        }
 
 </style>
 
@@ -110,7 +119,7 @@ window.addEventListener("load", function() {
       body: data,
     })
     .then(() => {
-      alert("Thank you for registering interest!");
+location.reload();
     })
   });
 })
@@ -226,6 +235,13 @@ Name:   <input name="name" class="form-input" placeholder="Your name" id="name">
   </div>
 </div>
 </form>
+<!-- Alert -->
+   <div id="alert">
+        <div class="spinner-border text-success"></div>
+      </div>
+
+
+
 <div class="statement clearfix rounded text-center">Guided tours will be free for a limited time</div>
 
 <div class="d-none d-md-block lead rounded fs-4 word-break" style="margin:1em 0.5em;min-height:200px">
@@ -333,5 +349,14 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
 
   </main>
 </div>   
+   <script>
+        
+          // Add an event listener to the "Show Alert" button
+        document.getElementById('show-alert')
+                  .addEventListener('click', function () {
+            document.getElementById('alert')
+                      .style.display = 'block';
+        });
+    </script>
   </body>
 </html>
