@@ -200,7 +200,7 @@ document.getElementById('success').style.display = 'block';
           <form id="my-form" method="POST" action="https://script.google.com/macros/s/AKfycbw7vpa_aKaw5KQ7Yuw0sFInUQABgv5GbcPm6skWA37SSU6LbOefW_us2zhOp0Rm228E/exec">  
 
    <div class="px-1 d-flex flex-row gap-2 align-items-center mt-2">
-<input name="email" placeholder="your email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+<input name="email" placeholder="your email" type="email" class="form-control" autocomplete="email" id="exampleInputEmail1" aria-describedby="emailHelp">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Notify
 </button>
@@ -223,10 +223,10 @@ document.getElementById('success').style.display = 'block';
       </div>
       <div class="modal-body">
 
-Name:   <input name="name" class="form-input" placeholder="Your name" id="name">
+Name:   <input name="name" class="form-input" placeholder="Your name" id="name" autocomplete="name">
 <div class="form-check m-2">
   <input name="news" class="form-check-input" type="checkbox" value="news" id="flexCheckDefault" checked>
-  <label class="form-check-label" for="flexCheckChecked">
+  <label class="form-check-label" for="flexCheckDefault">
     The Bollard Museum Newsletter 
   </label>
 </div>
