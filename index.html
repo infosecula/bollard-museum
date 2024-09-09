@@ -8,6 +8,45 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+
+<script>
+
+
+window.addEventListener("load", function() {
+const myModal = new bootstrap.Modal('#exampleModal');
+document.getElementById('success').style.display = 'none';
+
+
+
+
+
+
+  const form = document.getElementById('my-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+
+myModal.hide();
+document.getElementById('alert').style.display = 'none';
+document.getElementById('signup').style.display = 'none';
+document.getElementById('success').style.display = 'block';
+document.getElementById("success").style.zIndex = "1";
+
+
+
+
+    })
+
+  });
+})
+
+</script>
 <script type='text/javascript'>
 //some default pre init
 var Countly = Countly || {};
@@ -48,6 +87,7 @@ Countly.q.push(['collect_from_forms']);
 <link rel="icon" href="/img/favicons/favicon.ico">
 
 <style>
+
    	@media (min-width: 992px) {
     	}
 	.cover-container {
@@ -57,11 +97,14 @@ Countly.q.push(['collect_from_forms']);
 	background-image: url(images/fm18.jpg);  
 	background-size: 400px 300px;
 	height: 100vh;
+
 	}
+
 	.logo {
 	text-decoration:underline;
   	text-decoration-style: dotted;
 	color:#f7661e;
+
 	}
 	.navlink {
 	text-decoration:underline;
@@ -107,52 +150,15 @@ font-size:16px;
 </style>
 
 </head>
-<script>
 
-
-window.addEventListener("load", function() {
-const myModal = new bootstrap.Modal('#exampleModal');
-document.getElementById('success').style.display = 'none';
-
-
-
-
-
-
-  const form = document.getElementById('my-form');
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = e.target.action;
-    fetch(action, {
-      method: 'POST',
-      body: data,
-    })
-    .then(() => {
-
-myModal.hide();
-document.getElementById('alert').style.display = 'none';
-document.getElementById('signup').style.display = 'none';
-document.getElementById('success').style.display = 'block';
-
-
-
-
-
-    })
-
-  });
-})
-
-</script>
 
 <body>
 <div class="invisible">
 <noscript><img src='https://bollard-a1cead5c00221.flex.countly.com/pixel.png?app_key=441b4546b48d2fb62ac8eaa366fff7d93f7174bb&begin_session=1'/></noscript>
 </div>
-<div class="bg-white cover-container d-flex w-100 flex-column mx-auto my-xl-5 my-lg-4 my-md-3 my-sm-2 my-xs-1">
+<div class="cover-container d-flex w-100 flex-column mx-auto my-xl-5 my-lg-4 my-md-3 my-sm-2 my-xs-1">
   
-<main class="bg-white border border-5">
+<main class="bg-white text-dark border border-5">
 
 <div>
 <a href="https://bollardmuseum.org.uk/" style="text-decoration:none"><h1 class="logo text-uppercase text-center display-3" style="">The Bollard Museum</h1></a>
@@ -177,15 +183,14 @@ document.getElementById('success').style.display = 'block';
 </div>
 <br>
 <div class="statement clearfix rounded text-center">The World's First Bollard Museum, landing in Bristol early 2025</div>
-
-<div class="lead text-center word-break rounded fs-3 justify-content" style="margin:0.5em 0.5em;min-height:200px">
-
+<div class="text-center word-break rounded" style="margin:0.5em 0.5em;min-height:200px">
 <img src="images/bollards7.jpeg" width="200" class="d-none d-md-block border border-2 float-end">
-<img src="images/bollards1.jpeg" width="200" height="200" class="d-none d-md-block border border-2 float-start">
-<div style="line-height:1.2em;">Join us on this whimsical journey, where we'll explore the evolution of bollards, from humble beginnings to iconic status.
 
-<div id="success" class="bg-success bg-gradient  mx-auto m-4 p-3 py-2 text-white">Thank you for registering</div>
-    <div id="signup" class="card bg-warning bg-gradient mx-auto m-2 p-3 py-2">
+<img src="images/bollards1.jpeg" width="200" class="d-none d-md-block border border-2 float-start">
+<div style="line-height:1.2em;" class="fs-3">Join us on this whimsical journey, where we'll explore the evolution of bollards, from humble beginnings to iconic status.
+
+
+   <div id="signup" class="card bg-warning bg-gradient mx-auto m-2 p-3 py-2">
 
 
 
@@ -202,14 +207,16 @@ document.getElementById('success').style.display = 'block';
 
 
    <div class="px-1 d-flex flex-row gap-2 align-items-center mt-2">
-<input name="email" placeholder="your email" type="email" class="form-control" autocomplete="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+<input name="email" placeholder="your email"  type="email" class="form-control" autocomplete="email" id="exampleInputEmail1" aria-describedby="emailHelp">
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Notify
 </button>
             </div>
-            
+      
+      
         
     </div>
+<div id="success" style="z-index:1;" class="bg-success bg-gradient  mx-auto m-4 p-3 py-2 text-white">Thank you for registering</div> 
 </div>
 
 </div>
@@ -262,13 +269,13 @@ Name:   <input name="name" class="form-input" placeholder="Your name" id="name" 
 
 
 
-<div class="statement clearfix rounded text-center">Guided tours will be available to book soon</div>
+<div class="statement text-center clearfix rounded">Guided tours will be available to book soon</div>
 
-<div class="d-none d-md-block lead rounded fs-4 word-break" style="margin:1em 0.5em;min-height:200px">
-<img src="images/bollards10.jpeg" width="200" height="200" class=" border border-3 float-end">
+<div class="d-none d-md-block rounded text-center ms-4" style="margin:1em 0.5em;min-height:200px">
+<img src="images/bollards10.jpeg" width="200" height="200" class="border border-3 float-end">
 <img src="images/bollards11.jpeg" width="200" height="200" style="margin:0 0.5em;" class="border border-3 float-end">
 
-<div class="d-flex justify-content" style="padding:0em 0.5em;">
+<div class="d-flex text-center fs-3" style="padding:0em 0.5em;">
 
 Witness the ordinary turned into the extraordinary, as these omnipresent utilitarian objects are transformed into eye-catching modern art installations.
 
@@ -276,11 +283,11 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
 </div>
 
 
-<div class="d-block d-sm-block d-md-none lead rounded fs-4 text-center" style="margin:1em 0.5em;">
+<div class="d-block d-sm-block d-md-none rounded" style="margin:1em 0.5em;">
 
 <img src="images/bollards11.jpeg" style="max-width:45%;" class="img-fluid border border-3">
 <img src="images/bollards10.jpeg" style="max-width:45%;" class="img-fluid border border-3">
-<div class="d-flex clearfix text-start" style="padding:0.5em 0.5em;">
+<div class="d-flex clearfix d-flex text-center fs-4 word-break" style="padding:0.5em 0.5em;">
 
 Witness the ordinary turned into the extraordinary, as these omnipresent utilitarian objects are transformed into eye-catching modern art installations.
 
@@ -289,20 +296,16 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
 
 <div class="statement clearfix rounded text-center">What is The Bollard Museum?</div>
 <br>
-<div class="background bg-white clear" style="background:#fff;margin:0em 0.5em;min-height:200px">
+<div class="background clearfix" style="margin:0em 0.5em;min-height:200px">
 
-<div class="d-none d-md-block float start" style="margin-left:0.5em;max-width: 50%">
+<div class="d-none d-md-block" style="margin-left:0.5em;max-width: 50%">
 <img style="margin:0 1.5em 0 0;" src="images/bollards-w.jpg" class="img-fluid border border-2 float-start">
 </div>
-<div class="d-block d-sm-block d-md-none" style="margin:0.5em;">
+<div class="d-block d-sm-block d-md-none">
 <img src="images/bollards-w.jpg" class="img-fluid">
 </div>
-<div class="lead text-start"  style="margin:0em 0.5em;">
-
-<span class="logo text-uppercase fs-5">The Bollard Museum</span> is a community-led, not-for-profit, mixed-media visitor experience exploring intertwining themes of community spaces, liveable neighbourhoods, creativity & play, health, accessibility, inclusivity and sustainability.
-
-
-
+<div class="fs-4">
+<span class="logo text-uppercase">The Bollard Museum</span> is a community-led, not-for-profit, mixed-media visitor experience exploring intertwining themes</span> of community spaces, liveable neighbourhoods, creativity & play, health, accessibility, inclusivity and sustainability.
 	</div>
 </div>
 <br>
@@ -310,7 +313,7 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
 <div class="statement clearfix rounded text-center">Souvenirs Coming Soon</div>
 
 
-<div class="background bg-white text-center" style="margin:1em 0 0 0;padding:0 1em;">
+<div class="text-center" style="margin:1em 0 0 0;padding:0 1em;">
 
 
 <div class="card-group">
@@ -353,7 +356,7 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
 
 <div class="clearfix"></div>
 
-<div class="bg-white bg-gradient text-center" style="padding:1em 0.5em;">
+<div class="text-center" style="padding:1em 0.5em;">
 
 
 <span class="logo text-uppercase fs-4">The Bollard Museum</span>
