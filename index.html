@@ -10,17 +10,9 @@
 
 
 <script>
-
-
 window.addEventListener("load", function() {
 const myModal = new bootstrap.Modal('#exampleModal');
 document.getElementById('success').style.display = 'none';
-
-
-
-
-
-
   const form = document.getElementById('my-form');
   form.addEventListener("submit", function(e) {
     e.preventDefault();
@@ -31,22 +23,16 @@ document.getElementById('success').style.display = 'none';
       body: data,
     })
     .then(() => {
-
 myModal.hide();
 document.getElementById('alert').style.display = 'none';
 document.getElementById('signup').style.display = 'none';
 document.getElementById('success').style.display = 'block';
 document.getElementById("success").style.zIndex = "1";
-
-
-
-
     })
-
   });
 })
-
 </script>
+
 <script type='text/javascript'>
 //some default pre init
 var Countly = Countly || {};
@@ -78,8 +64,8 @@ Countly.q.push(['collect_from_forms']);
 })();
 </script>
 
-
    <title>The Bollard Museum</title>
+
 <link rel="apple-touch-icon" href="/img/favicons/apple-touch-icon.png" sizes="180x180">
 <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
@@ -216,13 +202,16 @@ font-size:16px;
       
         
     </div>
-<div id="success" style="z-index:1;" class="bg-success bg-gradient  mx-auto m-4 p-3 py-2 text-white">Thank you for registering
-
+<div id="success" style="z-index:1;" class="bg-success bg-gradient  mx-auto m-4 p-3 py-2 text-white">Thank you for registering. 
+<h6>As a reward here's our song, <i>The Bollard Boogie</i></h6>
 <audio controls>
   <source src="BollardBoogie.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
-</div> 
+<h6>Please share! Spread the word about us via your socials</h6>
+
+
+
 </div>
 
 </div>
@@ -285,6 +274,9 @@ Name:   <input name="name" class="form-input" placeholder="Your name" id="name" 
 
 Witness the ordinary turned into the extraordinary, as these omnipresent utilitarian objects are transformed into eye-catching modern art installations.
 
+
+
+</div> 
 </div>
 </div>
 
@@ -388,6 +380,8 @@ Witness the ordinary turned into the extraordinary, as these omnipresent utilita
             document.getElementById('alert')
                       .style.display = 'block';
         });
+
+
     </script>
   </body>
 </html>
